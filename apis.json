@@ -1,0 +1,76 @@
+{
+    "name": "Schoology",
+    "description": "Meet the LMS putting collaboration at the heart of the learning by connecting the people, content, and systems that fuel education. Sign up for free!",
+    "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/screen-capture-api\/2683-schoology.jpg",
+    "tags": [
+        "api lifeycle",
+        "have api"
+    ],
+    "created": "2019-12-19",
+    "modified": "2019-12-19",
+    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/schoology\/master\/apis.json",
+    "specificationVersion": "0.14",
+    "apis": [
+        {
+            "name": "Schoology",
+            "description": null,
+            "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/screen-capture-api\/2683-schoology.jpg",
+            "humanURL": "https:\/\/www.schoology.com\/",
+            "baseURL": "",
+            "tags": [],
+            "properties": [
+                {
+                    "type": "x-openapi",
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/schoology-openapi.json"
+                }
+            ]
+        }
+    ],
+    "include": [],
+    "x-common": [
+        {
+            "type": "Base",
+            "url": "https:\/\/www.schoology.com\/api"
+        },
+        {
+            "type": "Blog",
+            "url": "http:\/\/blog.schoology.com"
+        },
+        {
+            "type": "Crunchbase",
+            "url": "https:\/\/crunchbase.com\/organization\/schoology"
+        },
+        {
+            "type": "Crunchbase",
+            "url": "http:\/\/www.crunchbase.com\/company\/schoology"
+        },
+        {
+            "type": "Developers",
+            "url": "http:\/\/developers.schoology.com\/"
+        },
+        {
+            "type": "Email",
+            "url": "privacy@schoology.com"
+        },
+        {
+            "type": "Email",
+            "url": "help@schoology.com"
+        },
+        {
+            "type": "Email",
+            "url": "contracts@schoology.com"
+        },
+        {
+            "type": "Github",
+            "url": "https:\/\/github.com\/Schoology"
+        },
+        {
+            "type": "Twitter",
+            "url": "https:\/\/twitter.com\/schoology"
+        },
+        {
+            "type": "Website",
+            "url": "https:\/\/www.schoology.com\/"
+        }
+    ]
+}
