@@ -1,0 +1,29 @@
+aid: schoology
+url: https://raw.githubusercontent.com/api-evangelist/schoology/refs/heads/main/apis.yml
+name: Schoology
+x-type: company
+description: >-
+  Schoology Learning (a PowerSchool product) is a K-12 LMS with REST APIs for courses, sections, users, assignments, grades, and analytics.
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - EdTech
+  - LMS
+  - K-12
+  - PowerSchool
+  - Learning
+created: '2026-05-08'
+modified: '2026-05-08'
+specificationVersion: '0.19'
+apis: []
+common:
+  - type: Website
+    url: https://www.powerschool.com/classroom/schoology-learning/
+  - type: Plans
+    url: plans/schoology-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/schoology-rate-limits.yml
+  - type: FinOps
+    url: finops/schoology-finops.yml
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
