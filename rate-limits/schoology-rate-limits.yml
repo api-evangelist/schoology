@@ -10,23 +10,21 @@ tags:
 - EdTech
 - LMS
 - K-12
-- PowerSchool
-- Learning
 - Rate Limiting
 - Quotas
 - Throttling
-description: Placeholder rate-limit artifact for Schoology. Replace with real limits once researched.
-notes: Initial scaffold — limits have not yet been reconciled.
+description: Schoology REST API enforces per-app rate windows but exact thresholds are not openly published.
+notes: Use OPTIONS metadata calls and Multi-Call to reduce request counts.
 sources:
-- https://www.powerschool.com/classroom/schoology-learning/
+- https://developers.schoology.com/api-documentation/rest-api-v1
 responseCodes:
   throttled: 429
 limits:
-- name: Default
-  scope: account
-  metric: varies
-  limit: see provider documentation
-  notes: Pending reconciliation.
+- name: Default REST v1
+  scope: application
+  metric: requests
+  limit: not publicly documented
+  notes: Use Multi-Call POST to batch.
 policies:
 - name: Backoff Strategy
   description: Clients should implement exponential backoff with jitter and honor any Retry-After header.
