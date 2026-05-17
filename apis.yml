@@ -1,7 +1,7 @@
 aid: schoology
 url: https://raw.githubusercontent.com/api-evangelist/schoology/refs/heads/main/apis.yml
 name: Schoology
-x-type: company
+kind: company
 description: Schoology (a PowerSchool company) is a K-12 LMS. The Schoology REST API exposes districts,
   schools, buildings, users, groups, courses, sections, enrollments, events, blog posts, discussions,
   updates, media albums, documents, assignments, grades, grading scales, rubrics, attendance, submissions,
