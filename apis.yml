@@ -9,45 +9,49 @@ description: Schoology (a PowerSchool company) is a K-12 LMS. The Schoology REST
   search, and resource collections.
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
-- EdTech
-- LMS
-- K-12
+  - EdTech
+  - LMS
+  - K-12
 created: '2026-05-08'
 modified: '2026-05-08'
 specificationVersion: '0.19'
 apis:
-- aid: schoology:rest-api-v1
-  name: Schoology REST API v1
-  description: REST API for the Schoology K-12 LMS. Authenticated via OAuth. Supports realm resources
-    (districts, schools, buildings, users, groups, courses, sections), realm objects (enrollments, events,
-    blog posts, discussions, updates, media albums, documents), course-specific objects (assignments,
-    grades, grading scales, rubrics, categories, attendance, submissions, pages, SCORM), user objects
-    (friend requests, invites, networks, user grades), and other objects (grading periods, roles, private
-    messaging, search, resource collections). Multi-call POST and OPTIONS metadata calls supported. Bulk
-    CSV export available for admins.
-  humanURL: https://developers.schoology.com/api-documentation/rest-api-v1
-  baseURL: https://api.schoology.com/v1/
-  tags:
-  - REST
-  - OAuth
-  - LMS
-  - K-12
-  properties:
-  - type: Documentation
-    url: https://developers.schoology.com/api-documentation/rest-api-v1
-  - type: Authentication
-    url: https://developers.schoology.com/api-documentation/authentication
+  - aid: schoology:rest-api-v1
+    name: Schoology REST API v1
+    description: REST API for the Schoology K-12 LMS. Authenticated via OAuth. Supports realm resources
+      (districts, schools, buildings, users, groups, courses, sections), realm objects (enrollments, events,
+      blog posts, discussions, updates, media albums, documents), course-specific objects (assignments,
+      grades, grading scales, rubrics, categories, attendance, submissions, pages, SCORM), user objects
+      (friend requests, invites, networks, user grades), and other objects (grading periods, roles, private
+      messaging, search, resource collections). Multi-call POST and OPTIONS metadata calls supported. Bulk
+      CSV export available for admins.
+    humanURL: https://developers.schoology.com/api-documentation/rest-api-v1
+    baseURL: https://api.schoology.com/v1/
+    tags:
+    - REST
+    - OAuth
+    - LMS
+    - K-12
+    properties:
+    - type: Documentation
+      url: https://developers.schoology.com/api-documentation/rest-api-v1
+    - type: Authentication
+      url: https://developers.schoology.com/api-documentation/authentication
 common:
-- type: Website
-  url: https://www.schoology.com/
-- type: Developer
-  url: https://developers.schoology.com/
-- type: Plans
-  url: plans/schoology-plans-pricing.yml
-- type: RateLimits
-  url: rate-limits/schoology-rate-limits.yml
-- type: FinOps
-  url: finops/schoology-finops.yml
+  - type: GitHubOrganization
+    url: https://github.com/schoology
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/schoology
+  - type: Website
+    url: https://www.schoology.com/
+  - type: Developer
+    url: https://developers.schoology.com/
+  - type: Plans
+    url: plans/schoology-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/schoology-rate-limits.yml
+  - type: FinOps
+    url: finops/schoology-finops.yml
 maintainers:
-- FN: Kin Lane
-  email: kin@apievangelist.com
+  - FN: Kin Lane
+    email: kin@apievangelist.com
