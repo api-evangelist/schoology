@@ -13,7 +13,7 @@ tags:
   - LMS
   - K-12
 created: '2026-05-08'
-modified: '2026-05-08'
+modified: '2026-05-30'
 specificationVersion: '0.19'
 apis:
   - aid: schoology:rest-api-v1
@@ -37,6 +37,30 @@ apis:
       url: https://developers.schoology.com/api-documentation/rest-api-v1
     - type: Authentication
       url: https://developers.schoology.com/api-documentation/authentication
+  - aid: schoology:event-triggers-v1
+    name: Schoology Event Triggers (Webhooks) API
+    description: Documented webhook surface for the Schoology LMS. Schoology-defined "triggers" fire HTTP
+      POST event objects to user-registered "targets", linked via "subscriptions". Manage targets via
+      /v1/triggers/targets (GET, POST, PUT, DELETE) and subscriptions via /v1/triggers/subscriptions
+      (GET, PUT). Schoology expects HTTP 200 from the target; non-200 responses are requeued and retried
+      up to 5 times at 10 minute intervals. Supported trigger families include grade_item, attendance,
+      grades, section_completion, and dropbox_submission.
+    humanURL: https://developers.schoology.com/api-documentation/rest-api-triggers-v1/
+    baseURL: https://api.schoology.com/v1/
+    tags:
+    - Webhooks
+    - Event Triggers
+    - REST
+    - OAuth
+    - LMS
+    - K-12
+    properties:
+    - type: Documentation
+      url: https://developers.schoology.com/api-documentation/rest-api-triggers-v1/
+    - type: Documentation
+      url: https://developers.schoology.com/api-documentation/rest-api-triggers-v1/event_objects/
+    - type: OpenAPI
+      url: openapi/schoology-webhooks-openapi.yml
 common:
   - type: GitHubOrganization
     url: https://github.com/schoology
