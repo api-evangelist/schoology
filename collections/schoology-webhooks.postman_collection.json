@@ -1,0 +1,585 @@
+{
+  "item": [
+    {
+      "id": "4eca45e3-0048-4267-98ee-a8f5af3bebec",
+      "name": "Targets",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "2f067fe6-73f9-4a6d-851b-c1592261b788",
+          "name": "List targets",
+          "request": {
+            "name": "List targets",
+            "description": {
+              "content": "Lists target endpoints that Schoology can POST event objects to.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "triggers",
+                "targets"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "35b405c0-8d0c-4560-8a6d-0e536498ab93",
+              "name": "A collection of trigger targets.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "triggers",
+                    "targets"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "ebe60dcb-6c50-449e-bd9e-917d233d6aca",
+          "name": "Create target",
+          "request": {
+            "name": "Create target",
+            "description": {
+              "content": "Registers a new target endpoint to receive event POSTs from Schoology.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "triggers",
+                "targets"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"target\": \"<string>\",\n  \"id\": \"<integer>\",\n  \"description\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "30467e47-85e8-4a3a-b2d3-86fd8a1429fd",
+              "name": "Target created.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "triggers",
+                    "targets"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"target\": \"<string>\",\n  \"id\": \"<integer>\",\n  \"description\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "d45b2764-da86-4523-874f-a6e32f3958fd",
+          "name": "Edit target",
+          "request": {
+            "name": "Edit target",
+            "description": {
+              "content": "Updates an existing target endpoint.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "triggers",
+                "targets",
+                ":target_id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "target_id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"target\": \"<string>\",\n  \"id\": \"<integer>\",\n  \"description\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "c286ceef-f2ef-420e-8a7a-c9538e09aaf5",
+              "name": "Target updated.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "triggers",
+                    "targets",
+                    ":target_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "target_id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"target\": \"<string>\",\n  \"id\": \"<integer>\",\n  \"description\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "921f1308-471b-4e17-ac86-522a43098655",
+          "name": "Delete target",
+          "request": {
+            "name": "Delete target",
+            "description": {
+              "content": "Removes a target endpoint.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "triggers",
+                "targets",
+                ":target_id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "target_id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "method": "DELETE",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "8f5d8ba6-3e29-435a-ad1d-e4dc26e9bfdc",
+              "name": "Target deleted.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "triggers",
+                    "targets",
+                    ":target_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "target_id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "No Content",
+              "code": 204,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "968bb189-32ea-48ad-a2a4-97447190d9b8",
+      "name": "Subscriptions",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "e424c83c-42ac-44ff-adfc-a360ef6f1bc2",
+          "name": "List subscriptions",
+          "request": {
+            "name": "List subscriptions",
+            "description": {
+              "content": "Lists subscriptions linking targets to Schoology-defined triggers.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "triggers",
+                "subscriptions"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "f351fd51-321f-40f0-a598-76c9fb75f431",
+              "name": "A collection of subscriptions.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "triggers",
+                    "subscriptions"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "99a8e19e-c1cd-4a9f-b85e-3a3e5d0a8ece",
+          "name": "Create or modify subscriptions",
+          "request": {
+            "name": "Create or modify subscriptions",
+            "description": {
+              "content": "Creates or modifies subscriptions that link triggers to targets.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "triggers",
+                "subscriptions"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"target_id\": \"<integer>\",\n  \"trigger\": \"<string>\",\n  \"subscribed\": \"<integer>\",\n  \"version\": \"<string>\",\n  \"include_object\": \"<integer>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "f8a1c8a5-4a3d-4cea-ba32-9e284ac4a05d",
+              "name": "Subscription created or modified.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "triggers",
+                    "subscriptions"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"target_id\": \"<integer>\",\n  \"trigger\": \"<string>\",\n  \"subscribed\": \"<integer>\",\n  \"version\": \"<string>\",\n  \"include_object\": \"<integer>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.schoology.com/v1",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "accessTokenUrl",
+        "value": "https://api.schoology.com/v1/oauth/access_token"
+      },
+      {
+        "key": "authUrl",
+        "value": "https://api.schoology.com/v1/oauth/authorize"
+      },
+      {
+        "key": "grant_type",
+        "value": "authorization_code"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "c9db4cea-fac7-432b-8923-65405ab7028d",
+    "name": "Schoology Event Triggers (Webhooks) API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Schoology's documented webhook surface, called \"Event Triggers\". Schoology-defined\nactions (\"triggers\") fire against user-defined HTTP endpoints (\"targets\") that are\nlinked via \"subscriptions\". Schoology POSTs event objects to the configured target\nURL and expects an HTTP 200 response. If a non-200 is received, the event is\nrequeued and retried up to 5 times at 10 minute intervals, after which it is\ndropped.\nSource: https://developers.schoology.com/api-documentation/rest-api-triggers-v1/\nEvent objects: https://developers.schoology.com/api-documentation/rest-api-triggers-v1/event_objects/\n",
+      "type": "text/plain"
+    }
+  }
+}

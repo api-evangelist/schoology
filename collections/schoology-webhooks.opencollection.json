@@ -1,0 +1,130 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Schoology Event Triggers (Webhooks) API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "oauth2",
+      "flow": "authorization_code",
+      "authorizationUrl": "https://api.schoology.com/v1/oauth/authorize",
+      "accessTokenUrl": "https://api.schoology.com/v1/oauth/access_token",
+      "credentials": {
+        "clientId": "{{clientId}}",
+        "clientSecret": "{{clientSecret}}"
+      }
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Targets",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List targets",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.schoology.com/v1/triggers/targets"
+          },
+          "docs": "Lists target endpoints that Schoology can POST event objects to."
+        },
+        {
+          "info": {
+            "name": "Create target",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.schoology.com/v1/triggers/targets",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Registers a new target endpoint to receive event POSTs from Schoology."
+        },
+        {
+          "info": {
+            "name": "Edit target",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.schoology.com/v1/triggers/targets/:target_id",
+            "params": [
+              {
+                "name": "target_id",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Updates an existing target endpoint."
+        },
+        {
+          "info": {
+            "name": "Delete target",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.schoology.com/v1/triggers/targets/:target_id",
+            "params": [
+              {
+                "name": "target_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Removes a target endpoint."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Subscriptions",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List subscriptions",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.schoology.com/v1/triggers/subscriptions"
+          },
+          "docs": "Lists subscriptions linking targets to Schoology-defined triggers."
+        },
+        {
+          "info": {
+            "name": "Create or modify subscriptions",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.schoology.com/v1/triggers/subscriptions",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Creates or modifies subscriptions that link triggers to targets."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

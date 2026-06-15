@@ -1,0 +1,467 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Schoology REST API v1",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "oauth2",
+      "flow": "authorization_code",
+      "authorizationUrl": "https://api.schoology.com/v1/oauth/authorize",
+      "accessTokenUrl": "https://api.schoology.com/v1/oauth/access_token",
+      "credentials": {
+        "clientId": "{{clientId}}",
+        "clientSecret": "{{clientSecret}}"
+      }
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Users",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List users",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.schoology.com/v1/users"
+          },
+          "docs": "List users"
+        },
+        {
+          "info": {
+            "name": "Get user",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.schoology.com/v1/users/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get user"
+        },
+        {
+          "info": {
+            "name": "Get user by external ID",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.schoology.com/v1/users/ext/:external_id",
+            "params": [
+              {
+                "name": "external_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get user by external ID"
+        },
+        {
+          "info": {
+            "name": "List sections for a user",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.schoology.com/v1/users/:id/sections",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List sections for a user"
+        },
+        {
+          "info": {
+            "name": "List groups for a user",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.schoology.com/v1/users/:id/groups",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List groups for a user"
+        },
+        {
+          "info": {
+            "name": "Get grades for a user",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.schoology.com/v1/users/:id/grades",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get grades for a user"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Courses",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List courses",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.schoology.com/v1/courses"
+          },
+          "docs": "List courses"
+        },
+        {
+          "info": {
+            "name": "Get course",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.schoology.com/v1/courses/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get course"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Sections",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List sections",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.schoology.com/v1/sections"
+          },
+          "docs": "List sections"
+        },
+        {
+          "info": {
+            "name": "Get section",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.schoology.com/v1/sections/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get section"
+        },
+        {
+          "info": {
+            "name": "Get section by external ID",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.schoology.com/v1/sections/ext/:external_id",
+            "params": [
+              {
+                "name": "external_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get section by external ID"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Enrollments",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List enrollments in a section",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.schoology.com/v1/sections/:section_id/enrollments",
+            "params": [
+              {
+                "name": "section_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List enrollments in a section"
+        },
+        {
+          "info": {
+            "name": "Create an enrollment in a section",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.schoology.com/v1/sections/:section_id/enrollments",
+            "params": [
+              {
+                "name": "section_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Create an enrollment in a section"
+        },
+        {
+          "info": {
+            "name": "List enrollments in a group",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.schoology.com/v1/groups/:group_id/enrollments",
+            "params": [
+              {
+                "name": "group_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List enrollments in a group"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Assignments",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List assignments in a section",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.schoology.com/v1/sections/:section_id/assignments",
+            "params": [
+              {
+                "name": "section_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List assignments in a section"
+        },
+        {
+          "info": {
+            "name": "Create assignment",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.schoology.com/v1/sections/:section_id/assignments",
+            "params": [
+              {
+                "name": "section_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Create assignment"
+        },
+        {
+          "info": {
+            "name": "Get assignment",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.schoology.com/v1/sections/:section_id/assignments/:id",
+            "params": [
+              {
+                "name": "section_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get assignment"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Grades",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List grades in a section",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.schoology.com/v1/sections/:section_id/grades",
+            "params": [
+              {
+                "name": "section_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List grades in a section"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Submissions",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List submissions for a grade item",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.schoology.com/v1/sections/:section_id/submissions/:grade_item_id",
+            "params": [
+              {
+                "name": "section_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "grade_item_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List submissions for a grade item"
+        },
+        {
+          "info": {
+            "name": "Get a user's submission for a grade item",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.schoology.com/v1/sections/:section_id/submissions/:grade_item_id/:user_id",
+            "params": [
+              {
+                "name": "section_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "grade_item_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "user_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get a user's submission for a grade item"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Multi-Call",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Multi-call GET",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.schoology.com/v1/multiget"
+          },
+          "docs": "Multi-call GET"
+        },
+        {
+          "info": {
+            "name": "Multi-call OPTIONS",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.schoology.com/v1/multioptions"
+          },
+          "docs": "Multi-call OPTIONS"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
