@@ -1,0 +1,20 @@
+generated: '2026-07-11'
+method: derived
+source: openapi/schoology-openapi.yml, openapi/schoology-webhooks-openapi.yml
+summary:
+  types:
+  - oauth2
+  oauth2_flows:
+  - authorizationCode
+schemes:
+- name: OAuth
+  type: oauth2
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://api.schoology.com/v1/oauth/authorize
+    tokenUrl: https://api.schoology.com/v1/oauth/access_token
+    scopes: 0
+  description: OAuth 1.0a / 2.0 per Schoology Authentication docs.
+  sources:
+  - openapi/schoology-openapi.yml
+  - openapi/schoology-webhooks-openapi.yml
