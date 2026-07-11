@@ -1,0 +1,23 @@
+generated: '2026-07-11'
+method: derived
+source: openapi/schoology-openapi.yml, openapi/schoology-webhooks-openapi.yml
+docs: https://developers.schoology.com/api-documentation/authentication/
+note: Schoology's API uses OAuth 1.0 (two-legged and three-legged) which does not implement
+  scopes; access is governed by role-based permissions (the "Access Schoology API" role
+  permission) rather than OAuth scopes, per https://developers.schoology.com/api-documentation/authentication/.
+schemes:
+- name: OAuth
+  source: openapi/schoology-openapi.yml
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://api.schoology.com/v1/oauth/authorize
+    tokenUrl: https://api.schoology.com/v1/oauth/access_token
+  description: OAuth 1.0a / 2.0 per Schoology Authentication docs.
+- name: OAuth
+  source: openapi/schoology-webhooks-openapi.yml
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://api.schoology.com/v1/oauth/authorize
+    tokenUrl: https://api.schoology.com/v1/oauth/access_token
+  description: OAuth 1.0a / 2.0 per Schoology Authentication docs.
+scopes: []
