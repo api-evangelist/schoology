@@ -62,6 +62,8 @@ apis:
     - type: OpenAPI
       url: openapi/schoology-webhooks-openapi.yml
 common:
+  - type: AgenticAccess
+    url: agentic-access/schoology-agentic-access.yml
   - type: DomainSecurity
     url: security/schoology-domain-security.yml
   - type: Authentication
