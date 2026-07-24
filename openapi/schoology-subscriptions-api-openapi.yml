@@ -1,0 +1,87 @@
+openapi: 3.1.0
+info:
+  title: Schoology REST API v1 Assignments Subscriptions API
+  description: 'REST API for the Schoology K-12 LMS (a PowerSchool company). Provides access
+
+    to realm resources (users, courses, sections), realm objects (enrollments,
+
+    assignments, grades, submissions), and multi-call helpers.
+
+    Source: https://developers.schoology.com/api-documentation/rest-api-v1
+
+    '
+  version: '1.0'
+servers:
+- url: https://api.schoology.com/v1
+  description: Schoology REST API v1
+security:
+- OAuth: []
+tags:
+- name: Subscriptions
+paths:
+  /triggers/subscriptions:
+    get:
+      summary: List subscriptions
+      description: Lists subscriptions linking targets to Schoology-defined triggers.
+      operationId: listTriggerSubscriptions
+      tags:
+      - Subscriptions
+      responses:
+        '200':
+          description: A collection of subscriptions.
+    put:
+      summary: Create or modify subscriptions
+      description: Creates or modifies subscriptions that link triggers to targets.
+      operationId: upsertTriggerSubscriptions
+      tags:
+      - Subscriptions
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Subscription'
+      responses:
+        '200':
+          description: Subscription created or modified.
+components:
+  schemas:
+    Subscription:
+      type: object
+      description: Links a Schoology-defined trigger to a target.
+      properties:
+        target_id:
+          type: integer
+          description: Identifier of the target that should receive events for this trigger.
+        trigger:
+          type: string
+          description: Name of the Schoology-defined trigger (for example grade_item, attendance, grades, section_completion, dropbox_submission).
+        subscribed:
+          type: integer
+          enum:
+          - 0
+          - 1
+          description: Whether the subscription is active (1) or inactive (0).
+        include_object:
+          type: integer
+          enum:
+          - 0
+          - 1
+          description: Whether to include the full object representation in the event payload.
+        version:
+          type: string
+          description: API version of the subscription (for example "v1").
+      required:
+      - target_id
+      - trigger
+      - subscribed
+      - version
+  securitySchemes:
+    OAuth:
+      type: oauth2
+      description: OAuth 1.0a / 2.0 per Schoology Authentication docs.
+      flows:
+        authorizationCode:
+          authorizationUrl: https://api.schoology.com/v1/oauth/authorize
+          tokenUrl: https://api.schoology.com/v1/oauth/access_token
+          scopes: {}

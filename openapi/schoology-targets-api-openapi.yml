@@ -1,0 +1,108 @@
+openapi: 3.1.0
+info:
+  title: Schoology REST API v1 Assignments Targets API
+  description: 'REST API for the Schoology K-12 LMS (a PowerSchool company). Provides access
+
+    to realm resources (users, courses, sections), realm objects (enrollments,
+
+    assignments, grades, submissions), and multi-call helpers.
+
+    Source: https://developers.schoology.com/api-documentation/rest-api-v1
+
+    '
+  version: '1.0'
+servers:
+- url: https://api.schoology.com/v1
+  description: Schoology REST API v1
+security:
+- OAuth: []
+tags:
+- name: Targets
+paths:
+  /triggers/targets:
+    get:
+      summary: List targets
+      description: Lists target endpoints that Schoology can POST event objects to.
+      operationId: listTriggerTargets
+      tags:
+      - Targets
+      responses:
+        '200':
+          description: A collection of trigger targets.
+    post:
+      summary: Create target
+      description: Registers a new target endpoint to receive event POSTs from Schoology.
+      operationId: createTriggerTarget
+      tags:
+      - Targets
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Target'
+      responses:
+        '201':
+          description: Target created.
+  /triggers/targets/{target_id}:
+    put:
+      summary: Edit target
+      description: Updates an existing target endpoint.
+      operationId: updateTriggerTarget
+      tags:
+      - Targets
+      parameters:
+      - $ref: '#/components/parameters/TargetId'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Target'
+      responses:
+        '200':
+          description: Target updated.
+    delete:
+      summary: Delete target
+      description: Removes a target endpoint.
+      operationId: deleteTriggerTarget
+      tags:
+      - Targets
+      parameters:
+      - $ref: '#/components/parameters/TargetId'
+      responses:
+        '204':
+          description: Target deleted.
+components:
+  schemas:
+    Target:
+      type: object
+      description: A user-defined endpoint that Schoology POSTs event objects to.
+      properties:
+        id:
+          type: integer
+          description: Target identifier (assigned by Schoology).
+        target:
+          type: string
+          description: The URL of the target resource. This is where data will be sent when a trigger action occurs.
+        description:
+          type: string
+          description: Human-readable description of the target.
+      required:
+      - target
+  parameters:
+    TargetId:
+      name: target_id
+      in: path
+      required: true
+      schema:
+        type: string
+  securitySchemes:
+    OAuth:
+      type: oauth2
+      description: OAuth 1.0a / 2.0 per Schoology Authentication docs.
+      flows:
+        authorizationCode:
+          authorizationUrl: https://api.schoology.com/v1/oauth/authorize
+          tokenUrl: https://api.schoology.com/v1/oauth/access_token
+          scopes: {}

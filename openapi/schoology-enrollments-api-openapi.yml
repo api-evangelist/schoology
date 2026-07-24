@@ -1,0 +1,74 @@
+openapi: 3.1.0
+info:
+  title: Schoology REST API v1 Assignments Enrollments API
+  description: 'REST API for the Schoology K-12 LMS (a PowerSchool company). Provides access
+
+    to realm resources (users, courses, sections), realm objects (enrollments,
+
+    assignments, grades, submissions), and multi-call helpers.
+
+    Source: https://developers.schoology.com/api-documentation/rest-api-v1
+
+    '
+  version: '1.0'
+servers:
+- url: https://api.schoology.com/v1
+  description: Schoology REST API v1
+security:
+- OAuth: []
+tags:
+- name: Enrollments
+paths:
+  /sections/{section_id}/enrollments:
+    get:
+      summary: List enrollments in a section
+      operationId: listSectionEnrollments
+      tags:
+      - Enrollments
+      parameters:
+      - $ref: '#/components/parameters/SectionId'
+      responses:
+        '200':
+          description: Enrollments in the section.
+    post:
+      summary: Create an enrollment in a section
+      operationId: createSectionEnrollment
+      tags:
+      - Enrollments
+      parameters:
+      - $ref: '#/components/parameters/SectionId'
+      responses:
+        '201':
+          description: Enrollment created.
+  /groups/{group_id}/enrollments:
+    get:
+      summary: List enrollments in a group
+      operationId: listGroupEnrollments
+      tags:
+      - Enrollments
+      parameters:
+      - name: group_id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Enrollments in the group.
+components:
+  parameters:
+    SectionId:
+      name: section_id
+      in: path
+      required: true
+      schema:
+        type: string
+  securitySchemes:
+    OAuth:
+      type: oauth2
+      description: OAuth 1.0a / 2.0 per Schoology Authentication docs.
+      flows:
+        authorizationCode:
+          authorizationUrl: https://api.schoology.com/v1/oauth/authorize
+          tokenUrl: https://api.schoology.com/v1/oauth/access_token
+          scopes: {}

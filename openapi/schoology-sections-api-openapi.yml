@@ -1,0 +1,84 @@
+openapi: 3.1.0
+info:
+  title: Schoology REST API v1 Assignments Sections API
+  description: 'REST API for the Schoology K-12 LMS (a PowerSchool company). Provides access
+
+    to realm resources (users, courses, sections), realm objects (enrollments,
+
+    assignments, grades, submissions), and multi-call helpers.
+
+    Source: https://developers.schoology.com/api-documentation/rest-api-v1
+
+    '
+  version: '1.0'
+servers:
+- url: https://api.schoology.com/v1
+  description: Schoology REST API v1
+security:
+- OAuth: []
+tags:
+- name: Sections
+paths:
+  /users/{id}/sections:
+    get:
+      summary: List sections for a user
+      operationId: listUserSections
+      tags:
+      - Sections
+      parameters:
+      - $ref: '#/components/parameters/Id'
+      responses:
+        '200':
+          description: Sections the user is enrolled in.
+  /sections:
+    get:
+      summary: List sections
+      operationId: listSections
+      tags:
+      - Sections
+      responses:
+        '200':
+          description: A collection of sections.
+  /sections/{id}:
+    get:
+      summary: Get section
+      operationId: getSection
+      tags:
+      - Sections
+      parameters:
+      - $ref: '#/components/parameters/Id'
+      responses:
+        '200':
+          description: A single section.
+  /sections/ext/{external_id}:
+    get:
+      summary: Get section by external ID
+      operationId: getSectionByExternalId
+      tags:
+      - Sections
+      parameters:
+      - name: external_id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: A single section.
+components:
+  parameters:
+    Id:
+      name: id
+      in: path
+      required: true
+      schema:
+        type: string
+  securitySchemes:
+    OAuth:
+      type: oauth2
+      description: OAuth 1.0a / 2.0 per Schoology Authentication docs.
+      flows:
+        authorizationCode:
+          authorizationUrl: https://api.schoology.com/v1/oauth/authorize
+          tokenUrl: https://api.schoology.com/v1/oauth/access_token
+          scopes: {}

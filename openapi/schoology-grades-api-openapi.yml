@@ -1,0 +1,66 @@
+openapi: 3.1.0
+info:
+  title: Schoology REST API v1 Assignments Grades API
+  description: 'REST API for the Schoology K-12 LMS (a PowerSchool company). Provides access
+
+    to realm resources (users, courses, sections), realm objects (enrollments,
+
+    assignments, grades, submissions), and multi-call helpers.
+
+    Source: https://developers.schoology.com/api-documentation/rest-api-v1
+
+    '
+  version: '1.0'
+servers:
+- url: https://api.schoology.com/v1
+  description: Schoology REST API v1
+security:
+- OAuth: []
+tags:
+- name: Grades
+paths:
+  /users/{id}/grades:
+    get:
+      summary: Get grades for a user
+      operationId: getUserGrades
+      tags:
+      - Grades
+      parameters:
+      - $ref: '#/components/parameters/Id'
+      responses:
+        '200':
+          description: Grades for the user.
+  /sections/{section_id}/grades:
+    get:
+      summary: List grades in a section
+      operationId: listSectionGrades
+      tags:
+      - Grades
+      parameters:
+      - $ref: '#/components/parameters/SectionId'
+      responses:
+        '200':
+          description: Grades in the section.
+components:
+  parameters:
+    SectionId:
+      name: section_id
+      in: path
+      required: true
+      schema:
+        type: string
+    Id:
+      name: id
+      in: path
+      required: true
+      schema:
+        type: string
+  securitySchemes:
+    OAuth:
+      type: oauth2
+      description: OAuth 1.0a / 2.0 per Schoology Authentication docs.
+      flows:
+        authorizationCode:
+          authorizationUrl: https://api.schoology.com/v1/oauth/authorize
+          tokenUrl: https://api.schoology.com/v1/oauth/access_token
+          scopes: {}

@@ -1,0 +1,75 @@
+openapi: 3.1.0
+info:
+  title: Schoology REST API v1 Assignments Submissions API
+  description: 'REST API for the Schoology K-12 LMS (a PowerSchool company). Provides access
+
+    to realm resources (users, courses, sections), realm objects (enrollments,
+
+    assignments, grades, submissions), and multi-call helpers.
+
+    Source: https://developers.schoology.com/api-documentation/rest-api-v1
+
+    '
+  version: '1.0'
+servers:
+- url: https://api.schoology.com/v1
+  description: Schoology REST API v1
+security:
+- OAuth: []
+tags:
+- name: Submissions
+paths:
+  /sections/{section_id}/submissions/{grade_item_id}:
+    get:
+      summary: List submissions for a grade item
+      operationId: listSubmissions
+      tags:
+      - Submissions
+      parameters:
+      - $ref: '#/components/parameters/SectionId'
+      - name: grade_item_id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Submissions for the grade item.
+  /sections/{section_id}/submissions/{grade_item_id}/{user_id}:
+    get:
+      summary: Get a user's submission for a grade item
+      operationId: getSubmission
+      tags:
+      - Submissions
+      parameters:
+      - $ref: '#/components/parameters/SectionId'
+      - name: grade_item_id
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: user_id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: A submission.
+components:
+  parameters:
+    SectionId:
+      name: section_id
+      in: path
+      required: true
+      schema:
+        type: string
+  securitySchemes:
+    OAuth:
+      type: oauth2
+      description: OAuth 1.0a / 2.0 per Schoology Authentication docs.
+      flows:
+        authorizationCode:
+          authorizationUrl: https://api.schoology.com/v1/oauth/authorize
+          tokenUrl: https://api.schoology.com/v1/oauth/access_token
+          scopes: {}
