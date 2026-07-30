@@ -7,7 +7,20 @@ description: Schoology (a PowerSchool company) is a K-12 LMS. The Schoology REST
   updates, media albums, documents, assignments, grades, grading scales, rubrics, attendance, submissions,
   pages, SCORM packages, friend requests, invites, networks, grading periods, roles, private messaging,
   search, and resource collections.
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/schoology.png
 tags:
   - EdTech
   - LMS
@@ -16,51 +29,182 @@ created: '2026-05-08'
 modified: '2026-05-30'
 specificationVersion: '0.19'
 apis:
-  - aid: schoology:rest-api-v1
-    name: Schoology REST API v1
-    description: REST API for the Schoology K-12 LMS. Authenticated via OAuth. Supports realm resources
-      (districts, schools, buildings, users, groups, courses, sections), realm objects (enrollments, events,
-      blog posts, discussions, updates, media albums, documents), course-specific objects (assignments,
-      grades, grading scales, rubrics, categories, attendance, submissions, pages, SCORM), user objects
-      (friend requests, invites, networks, user grades), and other objects (grading periods, roles, private
-      messaging, search, resource collections). Multi-call POST and OPTIONS metadata calls supported. Bulk
-      CSV export available for admins.
-    humanURL: https://developers.schoology.com/api-documentation/rest-api-v1
-    baseURL: https://api.schoology.com/v1/
-    tags:
-    - REST
-    - OAuth
-    - LMS
-    - K-12
-    properties:
-    - type: Documentation
-      url: https://developers.schoology.com/api-documentation/rest-api-v1
-    - type: Authentication
-      url: https://developers.schoology.com/api-documentation/authentication
-  - aid: schoology:event-triggers-v1
-    name: Schoology Event Triggers (Webhooks) API
-    description: Documented webhook surface for the Schoology LMS. Schoology-defined "triggers" fire HTTP
-      POST event objects to user-registered "targets", linked via "subscriptions". Manage targets via
-      /v1/triggers/targets (GET, POST, PUT, DELETE) and subscriptions via /v1/triggers/subscriptions
-      (GET, PUT). Schoology expects HTTP 200 from the target; non-200 responses are requeued and retried
-      up to 5 times at 10 minute intervals. Supported trigger families include grade_item, attendance,
-      grades, section_completion, and dropbox_submission.
-    humanURL: https://developers.schoology.com/api-documentation/rest-api-triggers-v1/
-    baseURL: https://api.schoology.com/v1/
-    tags:
-    - Webhooks
-    - Event Triggers
-    - REST
-    - OAuth
-    - LMS
-    - K-12
-    properties:
-    - type: Documentation
-      url: https://developers.schoology.com/api-documentation/rest-api-triggers-v1/
-    - type: Documentation
-      url: https://developers.schoology.com/api-documentation/rest-api-triggers-v1/event_objects/
-    - type: OpenAPI
-      url: openapi/schoology-webhooks-openapi.yml
+- aid: schoology:rest-api-v1
+  name: Schoology REST API v1
+  description: >-
+    REST API for the Schoology K-12 LMS. Authenticated via OAuth. Supports realm resources (districts,
+    schools, buildings, users, groups, courses, sections), realm objects (enrollments, events, blog posts,
+    discussions, updates, media albums, documents), course-specific objects (assignments, grades, grading
+    scales, rubrics, categories, attendance, submissions, pages, SCORM), user objects (friend requests,
+    invites, networks, user grades), and other objects (grading periods, roles, private messaging, search,
+    resource collections). Multi-call POST and OPTIONS metadata calls supported. Bulk CSV export available
+    for admins.
+  humanURL: https://developers.schoology.com/api-documentation/rest-api-v1
+  baseURL: https://api.schoology.com/v1/
+  tags:
+  - REST
+  - OAuth
+  - LMS
+  - K-12
+  properties:
+  - type: Documentation
+    url: https://developers.schoology.com/api-documentation/rest-api-v1
+  - type: Authentication
+    url: https://developers.schoology.com/api-documentation/authentication
+- aid: schoology:schoology-assignments-api
+  name: Schoology Assignments API
+  description: The Assignments API from Schoology — 2 operation(s) for assignments.
+  humanURL: https://developers.schoology.com/api-documentation/rest-api-v1
+  baseURL: https://api.schoology.com/v1/
+  tags:
+  - Assignments
+  properties:
+  - type: OpenAPI
+    url: openapi/schoology-assignments-api-openapi.yml
+  - type: Documentation
+    url: https://developers.schoology.com/api-documentation/rest-api-triggers-v1/
+  - type: Documentation
+    url: https://developers.schoology.com/api-documentation/rest-api-triggers-v1/event_objects/
+- aid: schoology:schoology-courses-api
+  name: Schoology Courses API
+  description: The Courses API from Schoology — 2 operation(s) for courses.
+  humanURL: https://developers.schoology.com/api-documentation/rest-api-v1
+  baseURL: https://api.schoology.com/v1/
+  tags:
+  - Courses
+  properties:
+  - type: OpenAPI
+    url: openapi/schoology-courses-api-openapi.yml
+  - type: Documentation
+    url: https://developers.schoology.com/api-documentation/rest-api-triggers-v1/
+  - type: Documentation
+    url: https://developers.schoology.com/api-documentation/rest-api-triggers-v1/event_objects/
+- aid: schoology:schoology-enrollments-api
+  name: Schoology Enrollments API
+  description: The Enrollments API from Schoology — 2 operation(s) for enrollments.
+  humanURL: https://developers.schoology.com/api-documentation/rest-api-v1
+  baseURL: https://api.schoology.com/v1/
+  tags:
+  - Enrollments
+  properties:
+  - type: OpenAPI
+    url: openapi/schoology-enrollments-api-openapi.yml
+  - type: Documentation
+    url: https://developers.schoology.com/api-documentation/rest-api-triggers-v1/
+  - type: Documentation
+    url: https://developers.schoology.com/api-documentation/rest-api-triggers-v1/event_objects/
+- aid: schoology:schoology-grades-api
+  name: Schoology Grades API
+  description: The Grades API from Schoology — 2 operation(s) for grades.
+  humanURL: https://developers.schoology.com/api-documentation/rest-api-v1
+  baseURL: https://api.schoology.com/v1/
+  tags:
+  - Grades
+  properties:
+  - type: OpenAPI
+    url: openapi/schoology-grades-api-openapi.yml
+  - type: Documentation
+    url: https://developers.schoology.com/api-documentation/rest-api-triggers-v1/
+  - type: Documentation
+    url: https://developers.schoology.com/api-documentation/rest-api-triggers-v1/event_objects/
+- aid: schoology:schoology-groups-api
+  name: Schoology Groups API
+  description: The Groups API from Schoology — 2 operation(s) for groups.
+  humanURL: https://developers.schoology.com/api-documentation/rest-api-v1
+  baseURL: https://api.schoology.com/v1/
+  tags:
+  - Groups
+  properties:
+  - type: OpenAPI
+    url: openapi/schoology-groups-api-openapi.yml
+  - type: Documentation
+    url: https://developers.schoology.com/api-documentation/rest-api-triggers-v1/
+  - type: Documentation
+    url: https://developers.schoology.com/api-documentation/rest-api-triggers-v1/event_objects/
+- aid: schoology:schoology-multi-call-api
+  name: Schoology Multi-Call API
+  description: The Multi-Call API from Schoology — 2 operation(s) for multi-call.
+  humanURL: https://developers.schoology.com/api-documentation/rest-api-v1
+  baseURL: https://api.schoology.com/v1/
+  tags:
+  - Multi-Call
+  properties:
+  - type: OpenAPI
+    url: openapi/schoology-multi-call-api-openapi.yml
+  - type: Documentation
+    url: https://developers.schoology.com/api-documentation/rest-api-triggers-v1/
+  - type: Documentation
+    url: https://developers.schoology.com/api-documentation/rest-api-triggers-v1/event_objects/
+- aid: schoology:schoology-sections-api
+  name: Schoology Sections API
+  description: The Sections API from Schoology — 4 operation(s) for sections.
+  humanURL: https://developers.schoology.com/api-documentation/rest-api-v1
+  baseURL: https://api.schoology.com/v1/
+  tags:
+  - Sections
+  properties:
+  - type: OpenAPI
+    url: openapi/schoology-sections-api-openapi.yml
+  - type: Documentation
+    url: https://developers.schoology.com/api-documentation/rest-api-triggers-v1/
+  - type: Documentation
+    url: https://developers.schoology.com/api-documentation/rest-api-triggers-v1/event_objects/
+- aid: schoology:schoology-submissions-api
+  name: Schoology Submissions API
+  description: The Submissions API from Schoology — 2 operation(s) for submissions.
+  humanURL: https://developers.schoology.com/api-documentation/rest-api-v1
+  baseURL: https://api.schoology.com/v1/
+  tags:
+  - Submissions
+  properties:
+  - type: OpenAPI
+    url: openapi/schoology-submissions-api-openapi.yml
+  - type: Documentation
+    url: https://developers.schoology.com/api-documentation/rest-api-triggers-v1/
+  - type: Documentation
+    url: https://developers.schoology.com/api-documentation/rest-api-triggers-v1/event_objects/
+- aid: schoology:schoology-subscriptions-api
+  name: Schoology Subscriptions API
+  description: The Subscriptions API from Schoology — 1 operation(s) for subscriptions.
+  humanURL: https://developers.schoology.com/api-documentation/rest-api-v1
+  baseURL: https://api.schoology.com/v1/
+  tags:
+  - Subscriptions
+  properties:
+  - type: OpenAPI
+    url: openapi/schoology-subscriptions-api-openapi.yml
+  - type: Documentation
+    url: https://developers.schoology.com/api-documentation/rest-api-triggers-v1/
+  - type: Documentation
+    url: https://developers.schoology.com/api-documentation/rest-api-triggers-v1/event_objects/
+- aid: schoology:schoology-targets-api
+  name: Schoology Targets API
+  description: The Targets API from Schoology — 2 operation(s) for targets.
+  humanURL: https://developers.schoology.com/api-documentation/rest-api-v1
+  baseURL: https://api.schoology.com/v1/
+  tags:
+  - Targets
+  properties:
+  - type: OpenAPI
+    url: openapi/schoology-targets-api-openapi.yml
+  - type: Documentation
+    url: https://developers.schoology.com/api-documentation/rest-api-triggers-v1/
+  - type: Documentation
+    url: https://developers.schoology.com/api-documentation/rest-api-triggers-v1/event_objects/
+- aid: schoology:schoology-users-api
+  name: Schoology Users API
+  description: The Users API from Schoology — 6 operation(s) for users.
+  humanURL: https://developers.schoology.com/api-documentation/rest-api-v1
+  baseURL: https://api.schoology.com/v1/
+  tags:
+  - Users
+  properties:
+  - type: OpenAPI
+    url: openapi/schoology-users-api-openapi.yml
+  - type: Documentation
+    url: https://developers.schoology.com/api-documentation/rest-api-triggers-v1/
+  - type: Documentation
+    url: https://developers.schoology.com/api-documentation/rest-api-triggers-v1/event_objects/
 common:
   - type: AgenticAccess
     url: agentic-access/schoology-agentic-access.yml
