@@ -1,0 +1,34 @@
+{
+  "provider": "schoology",
+  "sources": [
+    "schoology-assignments-api-openapi.yml",
+    "schoology-courses-api-openapi.yml",
+    "schoology-enrollments-api-openapi.yml",
+    "schoology-grades-api-openapi.yml",
+    "schoology-groups-api-openapi.yml",
+    "schoology-multi-call-api-openapi.yml",
+    "schoology-sections-api-openapi.yml",
+    "schoology-submissions-api-openapi.yml",
+    "schoology-subscriptions-api-openapi.yml",
+    "schoology-targets-api-openapi.yml",
+    "schoology-users-api-openapi.yml"
+  ],
+  "outputs": [
+    "schoology-assignments-api-openapi.yml",
+    "schoology-courses-api-openapi.yml",
+    "schoology-enrollments-api-openapi.yml",
+    "schoology-grades-api-openapi.yml",
+    "schoology-groups-api-openapi.yml",
+    "schoology-multi-call-api-openapi.yml",
+    "schoology-sections-api-openapi.yml",
+    "schoology-submissions-api-openapi.yml",
+    "schoology-subscriptions-api-openapi.yml",
+    "schoology-targets-api-openapi.yml",
+    "schoology-users-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
