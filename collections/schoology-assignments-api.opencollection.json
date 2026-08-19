@@ -1,0 +1,89 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Schoology REST API v1 Assignments API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "oauth2",
+      "flow": "authorization_code",
+      "authorizationUrl": "https://api.schoology.com/v1/oauth/authorize",
+      "accessTokenUrl": "https://api.schoology.com/v1/oauth/access_token",
+      "credentials": {
+        "clientId": "{{clientId}}",
+        "clientSecret": "{{clientSecret}}"
+      }
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Assignments",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List assignments in a section",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.schoology.com/v1/sections/:section_id/assignments",
+            "params": [
+              {
+                "name": "section_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List assignments in a section"
+        },
+        {
+          "info": {
+            "name": "Create assignment",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.schoology.com/v1/sections/:section_id/assignments",
+            "params": [
+              {
+                "name": "section_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Create assignment"
+        },
+        {
+          "info": {
+            "name": "Get assignment",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.schoology.com/v1/sections/:section_id/assignments/:id",
+            "params": [
+              {
+                "name": "section_id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get assignment"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

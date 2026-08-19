@@ -1,0 +1,212 @@
+{
+  "item": [
+    {
+      "id": "3a168f96-b6c5-46cd-9512-5f09550170e5",
+      "name": "Subscriptions",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "4b082347-6b5e-46b2-95fb-f65bd4adcf02",
+          "name": "List subscriptions",
+          "request": {
+            "name": "List subscriptions",
+            "description": {
+              "content": "Lists subscriptions linking targets to Schoology-defined triggers.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "triggers",
+                "subscriptions"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "1220a91a-6d1b-46e9-9b3f-150bae1d14df",
+              "name": "A collection of subscriptions.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "triggers",
+                    "subscriptions"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "3286f35c-3241-4b6c-84db-67b050d13040",
+          "name": "Create or modify subscriptions",
+          "request": {
+            "name": "Create or modify subscriptions",
+            "description": {
+              "content": "Creates or modifies subscriptions that link triggers to targets.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "triggers",
+                "subscriptions"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"target_id\": \"<integer>\",\n  \"trigger\": \"<string>\",\n  \"subscribed\": \"<integer>\",\n  \"version\": \"<string>\",\n  \"include_object\": \"<integer>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "51174dc6-741a-449c-b7c7-105232ddf25e",
+              "name": "Subscription created or modified.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "triggers",
+                    "subscriptions"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"target_id\": \"<integer>\",\n  \"trigger\": \"<string>\",\n  \"subscribed\": \"<integer>\",\n  \"version\": \"<string>\",\n  \"include_object\": \"<integer>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.schoology.com/v1",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "accessTokenUrl",
+        "value": "https://api.schoology.com/v1/oauth/access_token"
+      },
+      {
+        "key": "authUrl",
+        "value": "https://api.schoology.com/v1/oauth/authorize"
+      },
+      {
+        "key": "grant_type",
+        "value": "authorization_code"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "53f5f7fa-1fbb-43ac-872b-6991cd63d5f9",
+    "name": "Schoology REST API v1 Assignments Subscriptions API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "REST API for the Schoology K-12 LMS (a PowerSchool company). Provides access\nto realm resources (users, courses, sections), realm objects (enrollments,\nassignments, grades, submissions), and multi-call helpers.\nSource: https://developers.schoology.com/api-documentation/rest-api-v1\n",
+      "type": "text/plain"
+    }
+  }
+}

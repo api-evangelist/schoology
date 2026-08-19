@@ -1,0 +1,84 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Schoology REST API v1 Assignments Enrollments API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "oauth2",
+      "flow": "authorization_code",
+      "authorizationUrl": "https://api.schoology.com/v1/oauth/authorize",
+      "accessTokenUrl": "https://api.schoology.com/v1/oauth/access_token",
+      "credentials": {
+        "clientId": "{{clientId}}",
+        "clientSecret": "{{clientSecret}}"
+      }
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Enrollments",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List enrollments in a section",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.schoology.com/v1/sections/:section_id/enrollments",
+            "params": [
+              {
+                "name": "section_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List enrollments in a section"
+        },
+        {
+          "info": {
+            "name": "Create an enrollment in a section",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.schoology.com/v1/sections/:section_id/enrollments",
+            "params": [
+              {
+                "name": "section_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Create an enrollment in a section"
+        },
+        {
+          "info": {
+            "name": "List enrollments in a group",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.schoology.com/v1/groups/:group_id/enrollments",
+            "params": [
+              {
+                "name": "group_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List enrollments in a group"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

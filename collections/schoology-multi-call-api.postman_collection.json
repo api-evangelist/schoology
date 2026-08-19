@@ -1,0 +1,179 @@
+{
+  "item": [
+    {
+      "id": "e3a5f119-207b-48fc-917b-eae4bf58e7a2",
+      "name": "Multi-Call",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "ff6ebb0a-ac9f-4b0f-8402-47df5737a556",
+          "name": "Multi-call GET",
+          "request": {
+            "name": "Multi-call GET",
+            "description": {},
+            "url": {
+              "path": [
+                "multiget"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "9151c257-7086-4e9d-8a52-a3333eade697",
+              "name": "Results of multiple GET requests.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "multiget"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "9b143aaa-2477-4d26-b127-df11d680012c",
+          "name": "Multi-call OPTIONS",
+          "request": {
+            "name": "Multi-call OPTIONS",
+            "description": {},
+            "url": {
+              "path": [
+                "multioptions"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "cee2bcd4-0764-4b4d-8c5b-fd643c1b5025",
+              "name": "Results of multiple OPTIONS requests.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "multioptions"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: oauth2",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.schoology.com/v1",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "oauth2",
+    "oauth2": [
+      {
+        "key": "accessTokenUrl",
+        "value": "https://api.schoology.com/v1/oauth/access_token"
+      },
+      {
+        "key": "authUrl",
+        "value": "https://api.schoology.com/v1/oauth/authorize"
+      },
+      {
+        "key": "grant_type",
+        "value": "authorization_code"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "ac36cb64-0d75-45e4-97f3-788000dcd40d",
+    "name": "Schoology REST API v1 Assignments Multi-Call API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "REST API for the Schoology K-12 LMS (a PowerSchool company). Provides access\nto realm resources (users, courses, sections), realm objects (enrollments,\nassignments, grades, submissions), and multi-call helpers.\nSource: https://developers.schoology.com/api-documentation/rest-api-v1\n",
+      "type": "text/plain"
+    }
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Schoology REST API v1 Assignments Grades API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "oauth2",
+      "flow": "authorization_code",
+      "authorizationUrl": "https://api.schoology.com/v1/oauth/authorize",
+      "accessTokenUrl": "https://api.schoology.com/v1/oauth/access_token",
+      "credentials": {
+        "clientId": "{{clientId}}",
+        "clientSecret": "{{clientSecret}}"
+      }
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Grades",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get grades for a user",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.schoology.com/v1/users/:id/grades",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get grades for a user"
+        },
+        {
+          "info": {
+            "name": "List grades in a section",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.schoology.com/v1/sections/:section_id/grades",
+            "params": [
+              {
+                "name": "section_id",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "List grades in a section"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

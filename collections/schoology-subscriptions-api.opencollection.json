@@ -1,0 +1,56 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Schoology REST API v1 Assignments Subscriptions API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "oauth2",
+      "flow": "authorization_code",
+      "authorizationUrl": "https://api.schoology.com/v1/oauth/authorize",
+      "accessTokenUrl": "https://api.schoology.com/v1/oauth/access_token",
+      "credentials": {
+        "clientId": "{{clientId}}",
+        "clientSecret": "{{clientSecret}}"
+      }
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Subscriptions",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List subscriptions",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.schoology.com/v1/triggers/subscriptions"
+          },
+          "docs": "Lists subscriptions linking targets to Schoology-defined triggers."
+        },
+        {
+          "info": {
+            "name": "Create or modify subscriptions",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.schoology.com/v1/triggers/subscriptions",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Creates or modifies subscriptions that link triggers to targets."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
