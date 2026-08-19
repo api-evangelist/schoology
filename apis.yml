@@ -27,7 +27,7 @@ tags:
   - K-12
 created: '2026-05-08'
 modified: '2026-05-30'
-specificationVersion: '0.19'
+specificationVersion: '0.23'
 apis:
 - aid: schoology:rest-api-v1
   name: Schoology REST API v1
