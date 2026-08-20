@@ -43,6 +43,11 @@ apis:
   baseURL: https://api.schoology.com/v1/
   tags:
   - REST
+  - Authentication
+  - LMS
+  - K-12
+  tags_raw:
+  - REST
   - OAuth
   - LMS
   - K-12
@@ -113,6 +118,8 @@ apis:
   humanURL: https://developers.schoology.com/api-documentation/rest-api-v1
   baseURL: https://api.schoology.com/v1/
   tags:
+  - Group
+  tags_raw:
   - Groups
   properties:
   - type: OpenAPI
@@ -169,6 +176,8 @@ apis:
   humanURL: https://developers.schoology.com/api-documentation/rest-api-v1
   baseURL: https://api.schoology.com/v1/
   tags:
+  - Subscription
+  tags_raw:
   - Subscriptions
   properties:
   - type: OpenAPI
@@ -197,6 +206,8 @@ apis:
   humanURL: https://developers.schoology.com/api-documentation/rest-api-v1
   baseURL: https://api.schoology.com/v1/
   tags:
+  - User
+  tags_raw:
   - Users
   properties:
   - type: OpenAPI
