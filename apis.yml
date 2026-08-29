@@ -7,6 +7,18 @@ description: Schoology (a PowerSchool company) is a K-12 LMS. The Schoology REST
   updates, media albums, documents, assignments, grades, grading scales, rubrics, attendance, submissions,
   pages, SCORM packages, friend requests, invites, networks, grading periods, roles, private messaging,
   search, and resource collections.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: true
+  label: Hosted service · you call their endpoint
+  confidence: high
+  source:
+  - openapi
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: self-serve
