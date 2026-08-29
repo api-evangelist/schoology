@@ -239,6 +239,9 @@ apis:
   - type: OpenAPI
     url: openapi/schoology-events-api-openapi.yml
 common:
+  - type: CapabilityMap
+    url: capabilities/schoology-capability-edges.yml
+    name: Schoology Business Capability Map
   - type: AgenticAccess
     url: agentic-access/schoology-agentic-access.yml
   - type: DomainSecurity

@@ -1,0 +1,64 @@
+slug: schoology
+provider: Schoology
+generated_by: planning/capability-mapping/scripts/classify_capabilities.py
+model: claude-opus-5
+frame:
+- Education
+min_confidence: 0.7
+capability_model:
+  source: https://github.com/vincentmakes/turbo-ea-capabilities
+  license: CC-BY-4.0
+  attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
+    CC BY 4.0
+  notice: NOTICE
+edge_count: 5
+edges:
+- tag: Enrollments
+  spec_file: schoology-enrollments-api-openapi.yml
+  capability_id: BC-4720.10
+  capability_id_l1: BC-4720
+  capability_name: Enrolment & Registration
+  confidence: 0.85
+  evidence: POST /sections/{section_id}/enrollments  createSectionEnrollment  Create an enrollment in
+    a section
+  reason: Operations create and list enrolments of learners into course sections in a K-12 LMS, which
+    is course registration/enrolment record keeping.
+- tag: Grades
+  spec_file: schoology-grades-api-openapi.yml
+  capability_id: BC-4740.30
+  capability_id_l1: BC-4740
+  capability_name: Marking & Grading Operations
+  confidence: 0.7
+  evidence: GET /sections/{section_id}/grades  listSectionGrades  List grades in a section
+  reason: Gradebook grades per user and per section are the output of marking/grading operations; some
+    ambiguity with academic record management (BC-4720.20).
+- tag: Submissions
+  spec_file: schoology-submissions-api-openapi.yml
+  capability_id: BC-4740.30
+  capability_id_l1: BC-4740
+  capability_name: Marking & Grading Operations
+  confidence: 0.7
+  evidence: GET /sections/{section_id}/submissions/{grade_item_id}/{user_id}  getSubmission  Get a user's
+    submission for a grade item
+  reason: Student work submitted against grade items feeds marking and grading; assessment operations
+    are the plain reading.
+- tag: Subscriptions
+  spec_file: schoology-subscriptions-api-openapi.yml
+  capability_id: BC-4270.80
+  capability_id_l1: BC-4270
+  capability_name: Webhook & Event Subscription Management
+  confidence: 0.7
+  evidence: GET /triggers/subscriptions  listTriggerSubscriptions  List subscriptions; 'Schoology POSTs
+    event objects to the configured target URL'
+  reason: Lifecycle of outbound webhook event subscriptions on the platform's developer surface, not a
+    commercial subscription.
+- tag: Targets
+  spec_file: schoology-targets-api-openapi.yml
+  capability_id: BC-4270.80
+  capability_id_l1: BC-4270
+  capability_name: Webhook & Event Subscription Management
+  confidence: 0.7
+  evidence: POST /triggers/targets  createTriggerTarget  Create target — 'user-defined HTTP endpoints
+    ("targets")'
+  reason: Management of webhook delivery endpoints, i.e. outbound event subscription infrastructure for
+    external developers.
