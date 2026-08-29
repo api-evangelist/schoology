@@ -1,17 +1,8 @@
 {
   "provider": "schoology",
   "sources": [
-    "schoology-assignments-api-openapi.yml",
-    "schoology-courses-api-openapi.yml",
-    "schoology-enrollments-api-openapi.yml",
-    "schoology-grades-api-openapi.yml",
-    "schoology-groups-api-openapi.yml",
-    "schoology-multi-call-api-openapi.yml",
-    "schoology-sections-api-openapi.yml",
-    "schoology-submissions-api-openapi.yml",
-    "schoology-subscriptions-api-openapi.yml",
-    "schoology-targets-api-openapi.yml",
-    "schoology-users-api-openapi.yml"
+    "_original/schoology-openapi.yml",
+    "_original/schoology-webhooks-openapi.yml"
   ],
   "outputs": [
     "schoology-assignments-api-openapi.yml",
@@ -22,13 +13,42 @@
     "schoology-multi-call-api-openapi.yml",
     "schoology-sections-api-openapi.yml",
     "schoology-submissions-api-openapi.yml",
+    "schoology-users-api-openapi.yml",
+    "schoology-events-api-openapi.yml",
     "schoology-subscriptions-api-openapi.yml",
-    "schoology-targets-api-openapi.yml",
-    "schoology-users-api-openapi.yml"
+    "schoology-targets-api-openapi.yml"
   ],
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (2 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "schoology-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "schoology-openapi.yml: declared missing tag: Assignments",
+    "schoology-openapi.yml: declared missing tag: Courses",
+    "schoology-openapi.yml: declared missing tag: Enrollments",
+    "schoology-openapi.yml: declared missing tag: Grades",
+    "schoology-openapi.yml: declared missing tag: Groups",
+    "schoology-openapi.yml: declared missing tag: Multi-Call",
+    "schoology-openapi.yml: declared missing tag: Sections",
+    "schoology-openapi.yml: declared missing tag: Submissions",
+    "schoology-openapi.yml: declared missing tag: Users",
+    "schoology-webhooks-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "schoology-webhooks-openapi.yml: declared missing tag: Events",
+    "schoology-webhooks-openapi.yml: declared missing tag: Subscriptions",
+    "schoology-webhooks-openapi.yml: declared missing tag: Targets"
+  ],
+  "skipped": [
+    "schoology-assignments-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "schoology-courses-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "schoology-enrollments-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "schoology-grades-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "schoology-groups-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "schoology-multi-call-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "schoology-sections-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "schoology-submissions-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "schoology-subscriptions-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "schoology-targets-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "schoology-users-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }

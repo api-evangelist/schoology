@@ -228,6 +228,16 @@ apis:
     url: https://developers.schoology.com/api-documentation/rest-api-triggers-v1/
   - type: Documentation
     url: https://developers.schoology.com/api-documentation/rest-api-triggers-v1/event_objects/
+- aid: schoology:schoology-events-api
+  name: Schoology Events API
+  description: The Events API from Schoology — 0 operation(s) for events.
+  humanURL: https://developers.schoology.com/api-documentation/rest-api-v1
+  baseURL: https://api.schoology.com/v1/
+  tags:
+  - Events
+  properties:
+  - type: OpenAPI
+    url: openapi/schoology-events-api-openapi.yml
 common:
   - type: AgenticAccess
     url: agentic-access/schoology-agentic-access.yml

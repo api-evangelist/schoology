@@ -1,6 +1,6 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: Schoology REST API v1 Assignments Grades API
+  title: Schoology REST API v1 Grades API
   description: 'REST API for the Schoology K-12 LMS (a PowerSchool company). Provides access
 
     to realm resources (users, courses, sections), realm objects (enrollments,
@@ -43,14 +43,14 @@ paths:
           description: Grades in the section.
 components:
   parameters:
-    SectionId:
-      name: section_id
+    Id:
+      name: id
       in: path
       required: true
       schema:
         type: string
-    Id:
-      name: id
+    SectionId:
+      name: section_id
       in: path
       required: true
       schema:
