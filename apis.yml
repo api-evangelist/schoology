@@ -102,6 +102,8 @@ apis:
   humanURL: https://developers.schoology.com/api-documentation/rest-api-v1
   baseURL: https://api.schoology.com/v1/
   tags:
+  - Enrollment
+  tags_raw:
   - Enrollments
   properties:
   - type: OpenAPI
