@@ -36,12 +36,14 @@
     "schoology-webhooks-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
     "schoology-webhooks-openapi.yml: declared missing tag: Events",
     "schoology-webhooks-openapi.yml: declared missing tag: Subscriptions",
-    "schoology-webhooks-openapi.yml: declared missing tag: Targets"
+    "schoology-webhooks-openapi.yml: declared missing tag: Targets",
+    "apis.yml register: already-registered"
   ],
   "skipped": [
     "schoology-assignments-api-openapi.yml: previously refined output, superseded by openapi/_original/",
     "schoology-courses-api-openapi.yml: previously refined output, superseded by openapi/_original/",
     "schoology-enrollments-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "schoology-events-api-openapi.yml: previously refined output, superseded by openapi/_original/",
     "schoology-grades-api-openapi.yml: previously refined output, superseded by openapi/_original/",
     "schoology-groups-api-openapi.yml: previously refined output, superseded by openapi/_original/",
     "schoology-multi-call-api-openapi.yml: previously refined output, superseded by openapi/_original/",

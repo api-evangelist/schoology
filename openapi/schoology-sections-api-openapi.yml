@@ -7,9 +7,7 @@ info:
 
     assignments, grades, submissions), and multi-call helpers.
 
-    Source: https://developers.schoology.com/api-documentation/rest-api-v1
-
-    '
+    Source: https://developers.schoology.com/api-documentation/rest-api-v1'
   version: '1.0'
 servers:
 - url: https://api.schoology.com/v1

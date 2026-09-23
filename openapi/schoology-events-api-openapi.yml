@@ -1,23 +1,7 @@
 openapi: 3.2.0
 info:
   title: Schoology Event Triggers (Webhooks) Events API
-  description: 'Schoology''s documented webhook surface, called "Event Triggers". Schoology-defined
-
-    actions ("triggers") fire against user-defined HTTP endpoints ("targets") that are
-
-    linked via "subscriptions". Schoology POSTs event objects to the configured target
-
-    URL and expects an HTTP 200 response. If a non-200 is received, the event is
-
-    requeued and retried up to 5 times at 10 minute intervals, after which it is
-
-    dropped.
-
-    Source: https://developers.schoology.com/api-documentation/rest-api-triggers-v1/
-
-    Event objects: https://developers.schoology.com/api-documentation/rest-api-triggers-v1/event_objects/
-
-    '
+  description: Schoology's documented webhook surface, called "Event Triggers".
   version: '1.0'
 servers:
 - url: https://api.schoology.com/v1
@@ -35,9 +19,7 @@ webhooks:
 
         trigger fires. The target must respond with HTTP 200. Non-200 responses are
 
-        retried up to 5 times at 10 minute intervals.
-
-        '
+        retried up to 5 times at 10 minute intervals.'
       operationId: receiveEventObject
       tags:
       - Events
