@@ -52,14 +52,14 @@ paths:
           description: An assignment.
 components:
   parameters:
-    Id:
-      name: id
+    SectionId:
+      name: section_id
       in: path
       required: true
       schema:
         type: string
-    SectionId:
-      name: section_id
+    Id:
+      name: id
       in: path
       required: true
       schema:
