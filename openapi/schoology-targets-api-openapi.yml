@@ -66,6 +66,13 @@ paths:
         '204':
           description: Target deleted.
 components:
+  parameters:
+    TargetId:
+      name: target_id
+      in: path
+      required: true
+      schema:
+        type: string
   schemas:
     Target:
       type: object
@@ -82,13 +89,6 @@ components:
           description: Human-readable description of the target.
       required:
       - target
-  parameters:
-    TargetId:
-      name: target_id
-      in: path
-      required: true
-      schema:
-        type: string
   securitySchemes:
     OAuth:
       type: oauth2

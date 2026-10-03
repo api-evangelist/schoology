@@ -41,14 +41,14 @@ paths:
           description: Grades in the section.
 components:
   parameters:
-    SectionId:
-      name: section_id
+    Id:
+      name: id
       in: path
       required: true
       schema:
         type: string
-    Id:
-      name: id
+    SectionId:
+      name: section_id
       in: path
       required: true
       schema:
