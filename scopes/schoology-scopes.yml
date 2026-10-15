@@ -1,23 +1,95 @@
-generated: '2026-07-11'
-method: derived
-source: openapi/schoology-openapi.yml, openapi/schoology-webhooks-openapi.yml
-docs: https://developers.schoology.com/api-documentation/authentication/
-note: Schoology's API uses OAuth 1.0 (two-legged and three-legged) which does not implement
-  scopes; access is governed by role-based permissions (the "Access Schoology API" role
-  permission) rather than OAuth scopes, per https://developers.schoology.com/api-documentation/authentication/.
+generated: '2026-10-14'
+method: none
+source: openapi/schoology-assignments-api-openapi.yml, openapi/schoology-courses-api-openapi.yml,
+  openapi/schoology-enrollments-api-openapi.yml, openapi/schoology-events-api-openapi.yml, openapi/schoology-grades-api-openapi.yml,
+  openapi/schoology-groups-api-openapi.yml, openapi/schoology-multi-call-api-openapi.yml, openapi/schoology-sections-api-openapi.yml,
+  openapi/schoology-submissions-api-openapi.yml, openapi/schoology-subscriptions-api-openapi.yml,
+  openapi/schoology-targets-api-openapi.yml, openapi/schoology-users-api-openapi.yml
 schemes:
 - name: OAuth
-  source: openapi/schoology-openapi.yml
+  source: openapi/schoology-assignments-api-openapi.yml
   flows:
   - flow: authorizationCode
     authorizationUrl: https://api.schoology.com/v1/oauth/authorize
     tokenUrl: https://api.schoology.com/v1/oauth/access_token
   description: OAuth 1.0a / 2.0 per Schoology Authentication docs.
 - name: OAuth
-  source: openapi/schoology-webhooks-openapi.yml
+  source: openapi/schoology-courses-api-openapi.yml
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://api.schoology.com/v1/oauth/authorize
+    tokenUrl: https://api.schoology.com/v1/oauth/access_token
+  description: OAuth 1.0a / 2.0 per Schoology Authentication docs.
+- name: OAuth
+  source: openapi/schoology-enrollments-api-openapi.yml
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://api.schoology.com/v1/oauth/authorize
+    tokenUrl: https://api.schoology.com/v1/oauth/access_token
+  description: OAuth 1.0a / 2.0 per Schoology Authentication docs.
+- name: OAuth
+  source: openapi/schoology-events-api-openapi.yml
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://api.schoology.com/v1/oauth/authorize
+    tokenUrl: https://api.schoology.com/v1/oauth/access_token
+  description: OAuth 1.0a / 2.0 per Schoology Authentication docs.
+- name: OAuth
+  source: openapi/schoology-grades-api-openapi.yml
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://api.schoology.com/v1/oauth/authorize
+    tokenUrl: https://api.schoology.com/v1/oauth/access_token
+  description: OAuth 1.0a / 2.0 per Schoology Authentication docs.
+- name: OAuth
+  source: openapi/schoology-groups-api-openapi.yml
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://api.schoology.com/v1/oauth/authorize
+    tokenUrl: https://api.schoology.com/v1/oauth/access_token
+  description: OAuth 1.0a / 2.0 per Schoology Authentication docs.
+- name: OAuth
+  source: openapi/schoology-multi-call-api-openapi.yml
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://api.schoology.com/v1/oauth/authorize
+    tokenUrl: https://api.schoology.com/v1/oauth/access_token
+  description: OAuth 1.0a / 2.0 per Schoology Authentication docs.
+- name: OAuth
+  source: openapi/schoology-sections-api-openapi.yml
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://api.schoology.com/v1/oauth/authorize
+    tokenUrl: https://api.schoology.com/v1/oauth/access_token
+  description: OAuth 1.0a / 2.0 per Schoology Authentication docs.
+- name: OAuth
+  source: openapi/schoology-submissions-api-openapi.yml
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://api.schoology.com/v1/oauth/authorize
+    tokenUrl: https://api.schoology.com/v1/oauth/access_token
+  description: OAuth 1.0a / 2.0 per Schoology Authentication docs.
+- name: OAuth
+  source: openapi/schoology-subscriptions-api-openapi.yml
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://api.schoology.com/v1/oauth/authorize
+    tokenUrl: https://api.schoology.com/v1/oauth/access_token
+  description: OAuth 1.0a / 2.0 per Schoology Authentication docs.
+- name: OAuth
+  source: openapi/schoology-targets-api-openapi.yml
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://api.schoology.com/v1/oauth/authorize
+    tokenUrl: https://api.schoology.com/v1/oauth/access_token
+  description: OAuth 1.0a / 2.0 per Schoology Authentication docs.
+- name: OAuth
+  source: openapi/schoology-users-api-openapi.yml
   flows:
   - flow: authorizationCode
     authorizationUrl: https://api.schoology.com/v1/oauth/authorize
     tokenUrl: https://api.schoology.com/v1/oauth/access_token
   description: OAuth 1.0a / 2.0 per Schoology Authentication docs.
 scopes: []
+note: The OAuth2 security scheme(s) in the OpenAPI declare no scopes, and no security requirement
+  references one.
