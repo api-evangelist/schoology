@@ -1,4 +1,4 @@
-# Schoology (schoology)
+# Schoology
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,79 +66,143 @@
 
 Schoology (a PowerSchool company) is a K-12 LMS. The Schoology REST API exposes districts, schools, buildings, users, groups, courses, sections, enrollments, events, blog posts, discussions, updates, media albums, documents, assignments, grades, grading scales, rubrics, attendance, submissions, pages, SCORM packages, friend requests, invites, networks, grading periods, roles, private messaging, search, and resource collections.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/schoology/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/schoology/refs/heads/main/apis.yml)
+**Areas:** EdTech · LMS · K-12
 
-## Tags
+## Schoology on APIs.io
 
-- EdTech
-- LMS
-- K-12
+Everything profiled for Schoology is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/schoology/](https://apis.io/providers/schoology/)** — or go straight to one of the APIs or properties below.
 
-## Timestamps
+### APIs (13)
 
-- **Created:** 2026-05-08
-- **Modified:** 2026-05-30
+- [Schoology REST API v1](https://apis.io/apis/schoology/rest-api-v1/) — REST API for the Schoology K-12 LMS. Authenticated via OAuth. Supports realm resources (districts, schools, buildings, users, groups, courses, sections),…
+- [Schoology Assignments API](https://apis.io/apis/schoology/schoology-assignments-api/) — The Assignments API from Schoology — 2 operation(s) for assignments.
+- [Schoology Courses API](https://apis.io/apis/schoology/schoology-courses-api/) — The Courses API from Schoology — 2 operation(s) for courses.
+- [Schoology Enrollments API](https://apis.io/apis/schoology/schoology-enrollments-api/) — The Enrollments API from Schoology — 2 operation(s) for enrollments.
+- [Schoology Grades API](https://apis.io/apis/schoology/schoology-grades-api/) — The Grades API from Schoology — 2 operation(s) for grades.
+- [Schoology Groups API](https://apis.io/apis/schoology/schoology-groups-api/) — The Groups API from Schoology — 2 operation(s) for groups.
+- [Schoology Multi-Call API](https://apis.io/apis/schoology/schoology-multi-call-api/) — The Multi-Call API from Schoology — 2 operation(s) for multi-call.
+- [Schoology Sections API](https://apis.io/apis/schoology/schoology-sections-api/) — The Sections API from Schoology — 4 operation(s) for sections.
+- [Schoology Submissions API](https://apis.io/apis/schoology/schoology-submissions-api/) — The Submissions API from Schoology — 2 operation(s) for submissions.
+- [Schoology Subscriptions API](https://apis.io/apis/schoology/schoology-subscriptions-api/) — The Subscriptions API from Schoology — 1 operation(s) for subscriptions.
+- [Schoology Targets API](https://apis.io/apis/schoology/schoology-targets-api/) — The Targets API from Schoology — 2 operation(s) for targets.
+- [Schoology Users API](https://apis.io/apis/schoology/schoology-users-api/) — The Users API from Schoology — 6 operation(s) for users.
+- [Schoology Events API](https://apis.io/apis/schoology/schoology-events-api/) — The Events API from Schoology — 0 operation(s) for events.
 
-## APIs
+### Published properties
 
-### Schoology REST API v1
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-REST API for the Schoology K-12 LMS. Authenticated via OAuth. Supports realm resources (districts, schools, buildings, users, groups, courses, sections), realm objects (enrollments, events, blog posts, discussions, updates, media albums, documents), course-specific objects (assignments, grades, grading scales, rubrics, categories, attendance, submissions, pages, SCORM), user objects (friend requests, invites, networks, user grades), and other objects (grading periods, roles, private messaging, search, resource collections). Multi-call POST and OPTIONS metadata calls supported. Bulk CSV export available for admins.
+#### Agentic access (1)
 
-- **Human URL:** [https://developers.schoology.com/api-documentation/rest-api-v1](https://developers.schoology.com/api-documentation/rest-api-v1)
-- **Base URL:** `https://api.schoology.com/v1/`
+Which operations an agent can call, which act, and which need a human in the loop.
 
-#### Tags
+- [Schoology Agentic Access](https://apis.io/agentic-access/schoology/schoology-agentic-access/)
 
-- REST
-- OAuth
-- LMS
-- K-12
+#### Collections (13)
 
-#### Properties
+Postman and Open Collection request collections.
 
-- [Documentation](https://developers.schoology.com/api-documentation/rest-api-v1)
-- [Authentication](https://developers.schoology.com/api-documentation/authentication)
-- [Postman Collection](collections/schoology-webhooks.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/schoology-webhooks.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [Postman Collection](collections/schoology.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/schoology.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+- [Schoology REST API v1](https://apis.io/collections/schoology/open-schoology/)
+- [Schoology REST API v1 Assignments API](https://apis.io/collections/schoology/open-schoology-assignments-api/)
+- [Schoology REST API v1 Assignments Courses API](https://apis.io/collections/schoology/open-schoology-courses-api/)
+- [Schoology REST API v1 Assignments Enrollments API](https://apis.io/collections/schoology/open-schoology-enrollments-api/)
+- [Schoology REST API v1 Assignments Grades API](https://apis.io/collections/schoology/open-schoology-grades-api/)
+- [Schoology REST API v1 Assignments Groups API](https://apis.io/collections/schoology/open-schoology-groups-api/)
+- [Schoology REST API v1 Assignments Multi-Call API](https://apis.io/collections/schoology/open-schoology-multi-call-api/)
+- [Schoology REST API v1 Assignments Sections API](https://apis.io/collections/schoology/open-schoology-sections-api/)
+- [Schoology REST API v1 Assignments Submissions API](https://apis.io/collections/schoology/open-schoology-submissions-api/)
+- [Schoology REST API v1 Assignments Subscriptions API](https://apis.io/collections/schoology/open-schoology-subscriptions-api/)
+- [Schoology REST API v1 Assignments Targets API](https://apis.io/collections/schoology/open-schoology-targets-api/)
+- [Schoology REST API v1 Assignments Users API](https://apis.io/collections/schoology/open-schoology-users-api/)
+- [Schoology Event Triggers (Webhooks) API](https://apis.io/collections/schoology/open-schoology-webhooks/)
 
-### Schoology Event Triggers (Webhooks) API
+#### Security (2)
 
-Documented webhook surface for the Schoology LMS. Schoology-defined "triggers" fire HTTP POST event objects to user-registered "targets", linked via "subscriptions". Manage targets via /v1/triggers/targets (GET, POST, PUT, DELETE) and subscriptions via /v1/triggers/subscriptions (GET, PUT). Schoology expects HTTP 200 from the target; non-200 responses are requeued and retried up to 5 times at 10 minute intervals. Supported trigger families include grade_item, attendance, grades, section_completion, and dropbox_submission.
+Authentication, trust centre, and vulnerability disclosure.
 
-- **Human URL:** [https://developers.schoology.com/api-documentation/rest-api-triggers-v1/](https://developers.schoology.com/api-documentation/rest-api-triggers-v1/)
-- **Base URL:** `https://api.schoology.com/v1/`
+- [Schoology Authentication](https://apis.io/security/schoology/schoology-authentication/)
+- [Schoology Domain Security](https://apis.io/security/schoology/schoology-domain-security/)
 
-#### Tags
+#### OAuth scopes (1)
 
-- Webhooks
-- Event Triggers
-- REST
-- OAuth
-- LMS
-- K-12
+The permissions the API asks for.
 
-#### Properties
+- [Schoology Scopes](https://apis.io/scopes/schoology/schoology-scopes/)
 
-- [Documentation](https://developers.schoology.com/api-documentation/rest-api-triggers-v1/)
-- [Documentation](https://developers.schoology.com/api-documentation/rest-api-triggers-v1/event_objects/)
-- [OpenAPI](openapi/schoology-webhooks-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/schoology-webhooks.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/schoology-webhooks.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+#### Plans and pricing (1)
 
-## Common Properties
+Published plans, tiers and prices.
 
-- [GitHub Organization](https://github.com/schoology)
-- [LinkedIn](https://www.linkedin.com/company/schoology)
+- [Schoology Plans Pricing](https://apis.io/plans/schoology/schoology-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Schoology Rate Limits](https://apis.io/rate-limits/schoology/schoology-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Schoology Finops](https://apis.io/finops/schoology/schoology-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
 - [Website](https://www.schoology.com/)
-- [Developer](https://developers.schoology.com/)
-- [Plans](plans/schoology-plans-pricing.yml)
-- [Rate Limits](rate-limits/schoology-rate-limits.yml)
-- [Fin Ops](finops/schoology-finops.yml)
+- [GitHub](https://github.com/schoology)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 22.8** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 57.1 |
+| Contract quality | 43.6 |
+| Contract governance | 0.0 |
+| Operational transparency | 7.9 |
+| Developer ergonomics | 21.4 |
+| Access clarity | 5.3 |
+
+**Agent readiness 27.2** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | negotiable (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | yes |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | documented (partial credit) |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 21.6** — Education & Research
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/schoology/](https://apis.io/providers/schoology/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Schoology: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/schoology/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
